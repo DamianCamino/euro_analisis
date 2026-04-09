@@ -1,0 +1,539 @@
+País de Origen,Código Origen,País Destino,Código Destino,Cantidad
+Austria,AT,Alemania,DE,15851
+Austria,AT,Países Bajos,NL,1569
+Austria,AT,Italia,IT,1107
+Austria,AT,Croacia,HR,829
+Austria,AT,Suecia,SE,735
+Austria,AT,Bélgica,BE,702
+Austria,AT,Bulgaria,BG,570
+Austria,AT,Francia,FR,504
+Austria,AT,Hungría,HU,387
+Austria,AT,Rumania,RO,298
+Austria,AT,CZ,CZ,282
+Austria,AT,Luxemburgo,LU,198
+Austria,AT,Finlandia,FI,111
+Austria,AT,Eslovenia,SI,92
+Austria,AT,Estonia,EE,82
+Austria,AT,Eslovaquia,SK,81
+Austria,AT,Letonia,LV,6
+Austria,AT,Lituania,LT,4
+Austria,AT,España,ES,0
+Bélgica,BE,España,ES,18080
+Bélgica,BE,Francia,FR,7876
+Bélgica,BE,Países Bajos,NL,7797
+Bélgica,BE,Alemania,DE,4646
+Bélgica,BE,Luxemburgo,LU,2543
+Bélgica,BE,Italia,IT,1590
+Bélgica,BE,Suecia,SE,922
+Bélgica,BE,Bulgaria,BG,750
+Bélgica,BE,Austria,AT,241
+Bélgica,BE,Rumania,RO,213
+Bélgica,BE,CZ,CZ,192
+Bélgica,BE,Estonia,EE,162
+Bélgica,BE,Croacia,HR,130
+Bélgica,BE,Hungría,HU,126
+Bélgica,BE,Finlandia,FI,126
+Bélgica,BE,Lituania,LT,30
+Bélgica,BE,Eslovenia,SI,20
+Bélgica,BE,Letonia,LV,6
+Bélgica,BE,Eslovaquia,SK,6
+Bulgaria,BG,Alemania,DE,71989
+Bulgaria,BG,Países Bajos,NL,23197
+Bulgaria,BG,España,ES,19873
+Bulgaria,BG,Bélgica,BE,9503
+Bulgaria,BG,Italia,IT,4444
+Bulgaria,BG,Austria,AT,2697
+Bulgaria,BG,CZ,CZ,2373
+Bulgaria,BG,Suecia,SE,1801
+Bulgaria,BG,Francia,FR,832
+Bulgaria,BG,Croacia,HR,681
+Bulgaria,BG,Rumania,RO,371
+Bulgaria,BG,Eslovenia,SI,338
+Bulgaria,BG,Luxemburgo,LU,328
+Bulgaria,BG,Finlandia,FI,259
+Bulgaria,BG,Estonia,EE,123
+Bulgaria,BG,Hungría,HU,81
+Bulgaria,BG,Lituania,LT,73
+Bulgaria,BG,Eslovaquia,SK,42
+Bulgaria,BG,Letonia,LV,15
+Chipre,CY,Países Bajos,NL,1578
+Chipre,CY,Alemania,DE,861
+Chipre,CY,Bélgica,BE,309
+Chipre,CY,Suecia,SE,258
+Chipre,CY,Italia,IT,174
+Chipre,CY,Bulgaria,BG,141
+Chipre,CY,Luxemburgo,LU,90
+Chipre,CY,Francia,FR,79
+Chipre,CY,CZ,CZ,51
+Chipre,CY,Finlandia,FI,45
+Chipre,CY,Hungría,HU,42
+Chipre,CY,Rumania,RO,41
+Chipre,CY,Austria,AT,39
+Chipre,CY,Estonia,EE,15
+Chipre,CY,Letonia,LV,9
+Chipre,CY,Croacia,HR,9
+Chipre,CY,Lituania,LT,8
+Chipre,CY,Eslovenia,SI,4
+Chipre,CY,Eslovaquia,SK,3
+Chipre,CY,España,ES,0
+CZ,CZ,Alemania,DE,11192
+CZ,CZ,Países Bajos,NL,2583
+CZ,CZ,Bélgica,BE,1059
+CZ,CZ,Austria,AT,934
+CZ,CZ,Italia,IT,837
+CZ,CZ,Suecia,SE,825
+CZ,CZ,Eslovaquia,SK,706
+CZ,CZ,Croacia,HR,423
+CZ,CZ,Bulgaria,BG,279
+CZ,CZ,Francia,FR,252
+CZ,CZ,Finlandia,FI,219
+CZ,CZ,Estonia,EE,210
+CZ,CZ,Luxemburgo,LU,156
+CZ,CZ,Hungría,HU,67
+CZ,CZ,Rumania,RO,57
+CZ,CZ,Eslovenia,SI,49
+CZ,CZ,Lituania,LT,16
+CZ,CZ,Letonia,LV,9
+CZ,CZ,España,ES,0
+República Checa,CZ_SK,Bélgica,BE,33
+República Checa,CZ_SK,Austria,AT,0
+República Checa,CZ_SK,Bulgaria,BG,0
+República Checa,CZ_SK,CZ,CZ,0
+República Checa,CZ_SK,Alemania,DE,0
+República Checa,CZ_SK,Estonia,EE,0
+República Checa,CZ_SK,España,ES,0
+República Checa,CZ_SK,Finlandia,FI,0
+República Checa,CZ_SK,Croacia,HR,0
+República Checa,CZ_SK,Hungría,HU,0
+República Checa,CZ_SK,Italia,IT,0
+República Checa,CZ_SK,Lituania,LT,0
+República Checa,CZ_SK,Luxemburgo,LU,0
+República Checa,CZ_SK,Países Bajos,NL,0
+República Checa,CZ_SK,Rumania,RO,0
+República Checa,CZ_SK,Suecia,SE,0
+República Checa,CZ_SK,Eslovenia,SI,0
+República Checa,CZ_SK,Eslovaquia,SK,0
+Alemania,DE,España,ES,50859
+Alemania,DE,Países Bajos,NL,21127
+Alemania,DE,Austria,AT,16243
+Alemania,DE,Suecia,SE,10717
+Alemania,DE,Francia,FR,8362
+Alemania,DE,Italia,IT,7825
+Alemania,DE,Bélgica,BE,7107
+Alemania,DE,Bulgaria,BG,5946
+Alemania,DE,Croacia,HR,3634
+Alemania,DE,Hungría,HU,3547
+Alemania,DE,Luxemburgo,LU,2544
+Alemania,DE,CZ,CZ,2011
+Alemania,DE,Rumania,RO,1412
+Alemania,DE,Estonia,EE,1402
+Alemania,DE,Finlandia,FI,1398
+Alemania,DE,Lituania,LT,388
+Alemania,DE,Eslovenia,SI,209
+Alemania,DE,Letonia,LV,173
+Alemania,DE,Eslovaquia,SK,159
+Dinamarca,DK,Suecia,SE,5371
+Dinamarca,DK,España,ES,3548
+Dinamarca,DK,Alemania,DE,2473
+Dinamarca,DK,Países Bajos,NL,1039
+Dinamarca,DK,Bélgica,BE,669
+Dinamarca,DK,Italia,IT,485
+Dinamarca,DK,Francia,FR,423
+Dinamarca,DK,Finlandia,FI,216
+Dinamarca,DK,Bulgaria,BG,213
+Dinamarca,DK,Luxemburgo,LU,169
+Dinamarca,DK,Austria,AT,104
+Dinamarca,DK,CZ,CZ,90
+Dinamarca,DK,Estonia,EE,84
+Dinamarca,DK,Croacia,HR,66
+Dinamarca,DK,Hungría,HU,44
+Dinamarca,DK,Rumania,RO,24
+Dinamarca,DK,Lituania,LT,23
+Dinamarca,DK,Letonia,LV,12
+Dinamarca,DK,Eslovenia,SI,7
+Dinamarca,DK,Eslovaquia,SK,0
+Estonia,EE,Finlandia,FI,3259
+Estonia,EE,Alemania,DE,1393
+Estonia,EE,Suecia,SE,1053
+Estonia,EE,Países Bajos,NL,894
+Estonia,EE,Bélgica,BE,366
+Estonia,EE,Italia,IT,270
+Estonia,EE,Francia,FR,239
+Estonia,EE,Bulgaria,BG,111
+Estonia,EE,CZ,CZ,102
+Estonia,EE,Luxemburgo,LU,84
+Estonia,EE,Austria,AT,75
+Estonia,EE,Lituania,LT,57
+Estonia,EE,Letonia,LV,52
+Estonia,EE,Croacia,HR,21
+Estonia,EE,Hungría,HU,18
+Estonia,EE,Rumania,RO,14
+Estonia,EE,Eslovenia,SI,8
+Estonia,EE,Eslovaquia,SK,6
+Estonia,EE,España,ES,0
+Grecia,EL,Alemania,DE,26552
+Grecia,EL,Países Bajos,NL,12777
+Grecia,EL,Bélgica,BE,4116
+Grecia,EL,Suecia,SE,3306
+Grecia,EL,Bulgaria,BG,2179
+Grecia,EL,Italia,IT,1907
+Grecia,EL,Luxemburgo,LU,1071
+Grecia,EL,Francia,FR,1059
+Grecia,EL,Austria,AT,817
+Grecia,EL,Finlandia,FI,450
+Grecia,EL,Rumania,RO,435
+Grecia,EL,CZ,CZ,390
+Grecia,EL,Estonia,EE,85
+Grecia,EL,Croacia,HR,66
+Grecia,EL,Hungría,HU,65
+Grecia,EL,Lituania,LT,56
+Grecia,EL,Eslovenia,SI,18
+Grecia,EL,Eslovaquia,SK,9
+Grecia,EL,Letonia,LV,6
+Grecia,EL,España,ES,0
+España,ES,Alemania,DE,38719
+España,ES,Países Bajos,NL,21618
+España,ES,Bélgica,BE,18794
+España,ES,Francia,FR,8862
+España,ES,Italia,IT,7137
+España,ES,Suecia,SE,4107
+España,ES,Luxemburgo,LU,2855
+España,ES,Finlandia,FI,1054
+España,ES,Austria,AT,1044
+España,ES,Bulgaria,BG,699
+España,ES,Estonia,EE,675
+España,ES,CZ,CZ,603
+España,ES,Croacia,HR,270
+España,ES,Rumania,RO,226
+España,ES,Hungría,HU,225
+España,ES,Lituania,LT,110
+España,ES,Eslovaquia,SK,66
+España,ES,Eslovenia,SI,37
+España,ES,Letonia,LV,12
+Finlandia,FI,Suecia,SE,4951
+Finlandia,FI,España,ES,3653
+Finlandia,FI,Alemania,DE,2274
+Finlandia,FI,Países Bajos,NL,1605
+Finlandia,FI,Estonia,EE,1517
+Finlandia,FI,Bélgica,BE,955
+Finlandia,FI,Italia,IT,471
+Finlandia,FI,Luxemburgo,LU,288
+Finlandia,FI,Francia,FR,205
+Finlandia,FI,Bulgaria,BG,165
+Finlandia,FI,Austria,AT,156
+Finlandia,FI,Rumania,RO,102
+Finlandia,FI,Letonia,LV,102
+Finlandia,FI,Hungría,HU,71
+Finlandia,FI,CZ,CZ,54
+Finlandia,FI,Croacia,HR,42
+Finlandia,FI,Lituania,LT,21
+Finlandia,FI,Eslovenia,SI,16
+Finlandia,FI,Eslovaquia,SK,9
+Francia,FR,España,ES,50095
+Francia,FR,Bélgica,BE,35194
+Francia,FR,Alemania,DE,21010
+Francia,FR,Países Bajos,NL,11712
+Francia,FR,Luxemburgo,LU,9264
+Francia,FR,Italia,IT,7000
+Francia,FR,Suecia,SE,3830
+Francia,FR,Rumania,RO,1554
+Francia,FR,Bulgaria,BG,1404
+Francia,FR,Estonia,EE,945
+Francia,FR,Finlandia,FI,822
+Francia,FR,Austria,AT,800
+Francia,FR,CZ,CZ,687
+Francia,FR,Croacia,HR,573
+Francia,FR,Hungría,HU,445
+Francia,FR,Lituania,LT,193
+Francia,FR,Eslovenia,SI,54
+Francia,FR,Letonia,LV,43
+Francia,FR,Eslovaquia,SK,33
+Croacia,HR,Alemania,DE,22992
+Croacia,HR,Austria,AT,4680
+Croacia,HR,Países Bajos,NL,2796
+Croacia,HR,Italia,IT,1367
+Croacia,HR,Suecia,SE,1188
+Croacia,HR,Eslovenia,SI,1013
+Croacia,HR,Bélgica,BE,981
+Croacia,HR,Luxemburgo,LU,273
+Croacia,HR,CZ,CZ,270
+Croacia,HR,Francia,FR,142
+Croacia,HR,Hungría,HU,134
+Croacia,HR,Bulgaria,BG,132
+Croacia,HR,Rumania,RO,100
+Croacia,HR,Finlandia,FI,60
+Croacia,HR,Estonia,EE,45
+Croacia,HR,Eslovaquia,SK,33
+Croacia,HR,Lituania,LT,13
+Croacia,HR,Letonia,LV,3
+Croacia,HR,España,ES,0
+Hungría,HU,Alemania,DE,40732
+Hungría,HU,Austria,AT,9496
+Hungría,HU,Países Bajos,NL,9303
+Hungría,HU,CZ,CZ,2550
+Hungría,HU,Suecia,SE,2306
+Hungría,HU,Italia,IT,1934
+Hungría,HU,Bélgica,BE,1897
+Hungría,HU,Eslovaquia,SK,870
+Hungría,HU,Croacia,HR,798
+Hungría,HU,Finlandia,FI,780
+Hungría,HU,Rumania,RO,528
+Hungría,HU,Francia,FR,494
+Hungría,HU,Luxemburgo,LU,468
+Hungría,HU,Bulgaria,BG,213
+Hungría,HU,Estonia,EE,144
+Hungría,HU,Eslovenia,SI,129
+Hungría,HU,Lituania,LT,29
+Hungría,HU,Letonia,LV,6
+Hungría,HU,España,ES,0
+Irlanda,IE,España,ES,13034
+Irlanda,IE,Países Bajos,NL,4845
+Irlanda,IE,Alemania,DE,4540
+Irlanda,IE,Bélgica,BE,1500
+Irlanda,IE,Francia,FR,1396
+Irlanda,IE,Italia,IT,1339
+Irlanda,IE,Suecia,SE,1321
+Irlanda,IE,Bulgaria,BG,561
+Irlanda,IE,Luxemburgo,LU,390
+Irlanda,IE,Austria,AT,237
+Irlanda,IE,Finlandia,FI,195
+Irlanda,IE,CZ,CZ,153
+Irlanda,IE,Croacia,HR,141
+Irlanda,IE,Estonia,EE,111
+Irlanda,IE,Rumania,RO,89
+Irlanda,IE,Hungría,HU,65
+Irlanda,IE,Eslovaquia,SK,48
+Irlanda,IE,Lituania,LT,37
+Irlanda,IE,Eslovenia,SI,17
+Irlanda,IE,Letonia,LV,9
+Italia,IT,España,ES,137588
+Italia,IT,Alemania,DE,55114
+Italia,IT,Países Bajos,NL,22454
+Italia,IT,Bélgica,BE,16138
+Italia,IT,Francia,FR,10644
+Italia,IT,Luxemburgo,LU,5458
+Italia,IT,Suecia,SE,5042
+Italia,IT,Austria,AT,3255
+Italia,IT,Bulgaria,BG,2313
+Italia,IT,CZ,CZ,1329
+Italia,IT,Croacia,HR,1231
+Italia,IT,Finlandia,FI,1137
+Italia,IT,Rumania,RO,996
+Italia,IT,Estonia,EE,615
+Italia,IT,Hungría,HU,424
+Italia,IT,Eslovenia,SI,316
+Italia,IT,Lituania,LT,304
+Italia,IT,Eslovaquia,SK,142
+Italia,IT,Letonia,LV,45
+Lituania,LT,Alemania,DE,6904
+Lituania,LT,España,ES,6012
+Lituania,LT,Países Bajos,NL,4185
+Lituania,LT,Suecia,SE,2077
+Lituania,LT,Bélgica,BE,945
+Lituania,LT,Italia,IT,693
+Lituania,LT,Finlandia,FI,390
+Lituania,LT,Estonia,EE,300
+Lituania,LT,Letonia,LV,271
+Lituania,LT,Luxemburgo,LU,231
+Lituania,LT,Bulgaria,BG,207
+Lituania,LT,CZ,CZ,174
+Lituania,LT,Austria,AT,127
+Lituania,LT,Francia,FR,108
+Lituania,LT,Rumania,RO,88
+Lituania,LT,Croacia,HR,57
+Lituania,LT,Hungría,HU,30
+Lituania,LT,Eslovaquia,SK,27
+Lituania,LT,Eslovenia,SI,15
+Luxemburgo,LU,Alemania,DE,5191
+Luxemburgo,LU,Francia,FR,1178
+Luxemburgo,LU,Bélgica,BE,1165
+Luxemburgo,LU,Países Bajos,NL,858
+Luxemburgo,LU,Austria,AT,177
+Luxemburgo,LU,Italia,IT,102
+Luxemburgo,LU,Suecia,SE,69
+Luxemburgo,LU,Bulgaria,BG,24
+Luxemburgo,LU,Rumania,RO,12
+Luxemburgo,LU,Finlandia,FI,12
+Luxemburgo,LU,Hungría,HU,8
+Luxemburgo,LU,Estonia,EE,6
+Luxemburgo,LU,CZ,CZ,6
+Luxemburgo,LU,Croacia,HR,4
+Luxemburgo,LU,Letonia,LV,3
+Luxemburgo,LU,España,ES,0
+Luxemburgo,LU,Lituania,LT,0
+Luxemburgo,LU,Eslovenia,SI,0
+Luxemburgo,LU,Eslovaquia,SK,0
+Letonia,LV,Alemania,DE,6924
+Letonia,LV,Países Bajos,NL,3814
+Letonia,LV,Suecia,SE,2144
+Letonia,LV,Estonia,EE,1433
+Letonia,LV,Finlandia,FI,969
+Letonia,LV,Bélgica,BE,843
+Letonia,LV,Italia,IT,666
+Letonia,LV,Lituania,LT,606
+Letonia,LV,Bulgaria,BG,366
+Letonia,LV,CZ,CZ,276
+Letonia,LV,Austria,AT,200
+Letonia,LV,Francia,FR,125
+Letonia,LV,Luxemburgo,LU,90
+Letonia,LV,Croacia,HR,45
+Letonia,LV,Eslovaquia,SK,36
+Letonia,LV,Rumania,RO,34
+Letonia,LV,Hungría,HU,24
+Letonia,LV,Eslovenia,SI,18
+Letonia,LV,España,ES,0
+Malta,MT,Italia,IT,460
+Malta,MT,Países Bajos,NL,309
+Malta,MT,Alemania,DE,243
+Malta,MT,Bélgica,BE,159
+Malta,MT,Suecia,SE,84
+Malta,MT,Luxemburgo,LU,78
+Malta,MT,Bulgaria,BG,78
+Malta,MT,Finlandia,FI,24
+Malta,MT,Francia,FR,21
+Malta,MT,Austria,AT,21
+Malta,MT,Hungría,HU,18
+Malta,MT,CZ,CZ,15
+Malta,MT,Estonia,EE,15
+Malta,MT,Croacia,HR,15
+Malta,MT,Eslovenia,SI,9
+Malta,MT,Letonia,LV,9
+Malta,MT,Rumania,RO,6
+Malta,MT,Lituania,LT,5
+Malta,MT,España,ES,0
+Malta,MT,Eslovaquia,SK,0
+Países Bajos,NL,España,ES,30757
+Países Bajos,NL,Bélgica,BE,22251
+Países Bajos,NL,Alemania,DE,16431
+Países Bajos,NL,Suecia,SE,5492
+Países Bajos,NL,Italia,IT,2740
+Países Bajos,NL,Francia,FR,2505
+Países Bajos,NL,Rumania,RO,1448
+Países Bajos,NL,Bulgaria,BG,1092
+Países Bajos,NL,Austria,AT,827
+Países Bajos,NL,Hungría,HU,620
+Países Bajos,NL,Luxemburgo,LU,474
+Países Bajos,NL,Finlandia,FI,468
+Países Bajos,NL,Croacia,HR,379
+Países Bajos,NL,CZ,CZ,333
+Países Bajos,NL,Estonia,EE,168
+Países Bajos,NL,Eslovenia,SI,73
+Países Bajos,NL,Lituania,LT,67
+Países Bajos,NL,Eslovaquia,SK,21
+Países Bajos,NL,Letonia,LV,9
+Polonia,PL,Alemania,DE,114182
+Polonia,PL,Países Bajos,NL,46798
+Polonia,PL,España,ES,21610
+Polonia,PL,Bélgica,BE,8835
+Polonia,PL,Suecia,SE,8565
+Polonia,PL,Italia,IT,5137
+Polonia,PL,Austria,AT,2399
+Polonia,PL,CZ,CZ,1881
+Polonia,PL,Francia,FR,1687
+Polonia,PL,Bulgaria,BG,1251
+Polonia,PL,Luxemburgo,LU,969
+Polonia,PL,Finlandia,FI,717
+Polonia,PL,Croacia,HR,660
+Polonia,PL,Estonia,EE,327
+Polonia,PL,Rumania,RO,283
+Polonia,PL,Lituania,LT,203
+Polonia,PL,Eslovaquia,SK,177
+Polonia,PL,Hungría,HU,162
+Polonia,PL,Eslovenia,SI,49
+Polonia,PL,Letonia,LV,39
+Portugal,PT,España,ES,34053
+Portugal,PT,Alemania,DE,16387
+Portugal,PT,Países Bajos,NL,15234
+Portugal,PT,Bélgica,BE,14168
+Portugal,PT,Luxemburgo,LU,10413
+Portugal,PT,Francia,FR,8088
+Portugal,PT,Italia,IT,2058
+Portugal,PT,Suecia,SE,1696
+Portugal,PT,Austria,AT,493
+Portugal,PT,Finlandia,FI,393
+Portugal,PT,CZ,CZ,327
+Portugal,PT,Bulgaria,BG,303
+Portugal,PT,Rumania,RO,276
+Portugal,PT,Estonia,EE,195
+Portugal,PT,Croacia,HR,135
+Portugal,PT,Hungría,HU,90
+Portugal,PT,Lituania,LT,85
+Portugal,PT,Eslovaquia,SK,39
+Portugal,PT,Letonia,LV,27
+Portugal,PT,Eslovenia,SI,21
+Rumania,RO,Alemania,DE,202913
+Rumania,RO,España,ES,114370
+Rumania,RO,Italia,IT,69514
+Rumania,RO,Bélgica,BE,34356
+Rumania,RO,Países Bajos,NL,29540
+Rumania,RO,Austria,AT,9900
+Rumania,RO,Francia,FR,5751
+Rumania,RO,Suecia,SE,5216
+Rumania,RO,CZ,CZ,3181
+Rumania,RO,Bulgaria,BG,1690
+Rumania,RO,Hungría,HU,1435
+Rumania,RO,Luxemburgo,LU,1389
+Rumania,RO,Finlandia,FI,1158
+Rumania,RO,Croacia,HR,462
+Rumania,RO,Estonia,EE,348
+Rumania,RO,Lituania,LT,204
+Rumania,RO,Eslovaquia,SK,129
+Rumania,RO,Eslovenia,SI,63
+Rumania,RO,Letonia,LV,24
+Suecia,SE,España,ES,12020
+Suecia,SE,Alemania,DE,9510
+Suecia,SE,Países Bajos,NL,2740
+Suecia,SE,Finlandia,FI,2483
+Suecia,SE,Rumania,RO,1819
+Suecia,SE,Bélgica,BE,1723
+Suecia,SE,Italia,IT,978
+Suecia,SE,Francia,FR,727
+Suecia,SE,CZ,CZ,507
+Suecia,SE,Austria,AT,432
+Suecia,SE,Bulgaria,BG,415
+Suecia,SE,Croacia,HR,384
+Suecia,SE,Luxemburgo,LU,369
+Suecia,SE,Estonia,EE,249
+Suecia,SE,Hungría,HU,180
+Suecia,SE,Letonia,LV,126
+Suecia,SE,Eslovaquia,SK,111
+Suecia,SE,Lituania,LT,91
+Suecia,SE,Eslovenia,SI,20
+Eslovenia,SI,Croacia,HR,3008
+Eslovenia,SI,Alemania,DE,2574
+Eslovenia,SI,Austria,AT,814
+Eslovenia,SI,Italia,IT,759
+Eslovenia,SI,Países Bajos,NL,606
+Eslovenia,SI,Suecia,SE,390
+Eslovenia,SI,Bélgica,BE,387
+Eslovenia,SI,Francia,FR,143
+Eslovenia,SI,CZ,CZ,90
+Eslovenia,SI,Luxemburgo,LU,84
+Eslovenia,SI,Bulgaria,BG,60
+Eslovenia,SI,Finlandia,FI,51
+Eslovenia,SI,Hungría,HU,32
+Eslovenia,SI,Estonia,EE,30
+Eslovenia,SI,Rumania,RO,23
+Eslovenia,SI,Eslovaquia,SK,15
+Eslovenia,SI,Letonia,LV,3
+Eslovenia,SI,Lituania,LT,3
+Eslovenia,SI,España,ES,0
+Eslovaquia,SK,CZ,CZ,20955
+Eslovaquia,SK,Alemania,DE,11185
+Eslovaquia,SK,Países Bajos,NL,4425
+Eslovaquia,SK,Austria,AT,2573
+Eslovaquia,SK,Bélgica,BE,1329
+Eslovaquia,SK,Hungría,HU,1179
+Eslovaquia,SK,Italia,IT,1014
+Eslovaquia,SK,Suecia,SE,693
+Eslovaquia,SK,Croacia,HR,435
+Eslovaquia,SK,Luxemburgo,LU,222
+Eslovaquia,SK,Finlandia,FI,210
+Eslovaquia,SK,Francia,FR,206
+Eslovaquia,SK,Bulgaria,BG,189
+Eslovaquia,SK,Estonia,EE,108
+Eslovaquia,SK,Rumania,RO,68
+Eslovaquia,SK,Eslovenia,SI,45
+Eslovaquia,SK,Lituania,LT,18
+Eslovaquia,SK,España,ES,0
+Eslovaquia,SK,Letonia,LV,0
