@@ -1,6 +1,3 @@
-import os
-from pathlib import Path
-
 import pandas as pd
 import dash
 from dash import dcc, html, Input, Output
@@ -69,10 +66,9 @@ coords = {
 # los datos han sido sacados de migr_imm1ctz, del portal de datos de Eurostat
 # para facilidad de uso, los divido en recepción, según los valores citizen y geo del repositorio original
 #
-BASE_DIR = Path(__file__).resolve().parent
 
-df_recep = pd.read_csv(BASE_DIR / "recepcion_nuevo.csv")
-df_emi = pd.read_csv(BASE_DIR / "emigracion_nuevo.csv")
+df_recep = pd.read_csv("recepcion_nuevo.csv")
+df_emi = pd.read_csv("emigracion_nuevo.csv")
 
 
 
@@ -214,8 +210,6 @@ def agregar_flechas(fig, pais):
 # actualización dinámica
 
 app = dash.Dash(__name__)
-server = app.server
-app.title = "Mapa movilidad UE"
 
 app.layout = html.Div([
     dcc.Graph(id="map", figure=mapa_base(),
@@ -268,6 +262,6 @@ def update(click):
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
+    app.run(debug=True)
 
     
