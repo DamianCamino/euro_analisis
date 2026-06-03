@@ -148,7 +148,7 @@ def mapa_base(lang="es"):
     lats,lons,texts,isos=[],[],[],[]
 
     for iso,p in paises.items():
-        lats.append(p.lat)
+        #lats.append(p.lat)
         lons.append(p.lon)
        
         # texts.append(t(f"countries.{iso}", lang))
