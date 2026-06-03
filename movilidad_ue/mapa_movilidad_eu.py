@@ -3,8 +3,10 @@ from pathlib import Path
 
 import pandas as pd
 import dash
-from dash import dcc, html, Input, Output
+from dash import dcc, html, Input, Output, State
 import plotly.graph_objects as go
+
+from translations import t
 
 # división por objetos
 
@@ -33,36 +35,36 @@ class Pais:
         self.emision = emision
 
 
-# relación de coordenadas para el mapa
+# relación de coordenadas para el mapa con nombres en inglés (se traducen dinámicamente)
 coords = {
 "AT": ("Austria",47.51,14.55),
-"BE": ("Bélgica",50.85,4.35),
+"BE": ("Belgium",50.85,4.35),
 "BG": ("Bulgaria",42.69,23.32),
-"CY": ("Chipre",35.12,33.43),
-"CZ": ("República Checa",50.07,14.43),
-"CZ_SK": ("República Checa",50.07,14.43),  
-"DE": ("Alemania",51.16,10.45),
-"DK": ("Dinamarca",55.67,12.56),
+"CY": ("Cyprus",35.12,33.43),
+"CZ": ("Czech Republic",50.07,14.43),
+"CZ_SK": ("Czech Republic",50.07,14.43),  
+"DE": ("Germany",51.16,10.45),
+"DK": ("Denmark",55.67,12.56),
 "EE": ("Estonia",59.43,24.75),
-"EL": ("Grecia",37.98,23.72),
-"ES": ("España",40.46,-3.74),
-"FI": ("Finlandia",60.17,24.93),
-"FR": ("Francia",48.85,2.35),
-"HR": ("Croacia",45.1,15.2),
-"HU": ("Hungría",47.16,19.50),
-"IE": ("Irlanda",53.34,-6.26),
-"IT": ("Italia",41.87,12.56),
-"LT": ("Lituania",54.68,25.27),
-"LU": ("Luxemburgo",49.61,6.13),
-"LV": ("Letonia",56.94,24.10),
+"EL": ("Greece",37.98,23.72),
+"ES": ("Spain",40.46,-3.74),
+"FI": ("Finland",60.17,24.93),
+"FR": ("France",48.85,2.35),
+"HR": ("Croatia",45.1,15.2),
+"HU": ("Hungary",47.16,19.50),
+"IE": ("Ireland",53.34,-6.26),
+"IT": ("Italy",41.87,12.56),
+"LT": ("Lithuania",54.68,25.27),
+"LU": ("Luxembourg",49.61,6.13),
+"LV": ("Latvia",56.94,24.10),
 "MT": ("Malta",35.89,14.51),
-"NL": ("Países Bajos",52.13,5.29),
-"PL": ("Polonia",52.23,21.01),
+"NL": ("Netherlands",52.13,5.29),
+"PL": ("Poland",52.23,21.01),
 "PT": ("Portugal",38.72,-9.13),
-"RO": ("Rumania",45.94,24.96),
-"SE": ("Suecia",59.32,18.06),
-"SI": ("Eslovenia",46.05,14.50),
-"SK": ("Eslovaquia",48.14,17.10),
+"RO": ("Romania",45.94,24.96),
+"SE": ("Sweden",59.32,18.06),
+"SI": ("Slovenia",46.05,14.50),
+"SK": ("Slovakia",48.14,17.10),
 }
 
 
@@ -135,20 +137,20 @@ for iso2,(nombre,lat,lon) in coords.items():
         construir_emision(iso2)
     )
 
-print(f"Total países creados: {len(paises)}")
+print(f"{t('total_countries')}: {len(paises)}")
 for iso, p in paises.items():
     if p.recepcion.relaciones or p.emision.relaciones:
         print(f"{iso}: {len(p.recepcion.relaciones)} rec, {len(p.emision.relaciones)} emi")
 
 
-def mapa_base():
+def mapa_base(lang="es"):
 
     lats,lons,texts,isos=[],[],[],[]
 
     for iso,p in paises.items():
         lats.append(p.lat)
         lons.append(p.lon)
-        #texts.append(p.nombre)
+        texts.append(t(f"countries.{iso}", lang))
         isos.append(iso)
 
     fig = go.Figure(go.Scattergeo(
@@ -218,7 +220,30 @@ server = app.server
 app.title = "Mapa movilidad UE"
 
 app.layout = html.Div([
-    dcc.Graph(id="map", figure=mapa_base(),
+    # Selector de idioma
+    html.Div([
+        html.Label("Language / Idioma:", style={"marginRight": "10px"}),
+        dcc.RadioItems(
+            id="language-selector",
+            options=[
+                {"label": " Español", "value": "es"},
+                {"label": " English", "value": "en"}
+            ],
+            value="es",
+            inline=True,
+            style={"display": "inline-flex", "gap": "20px"}
+        )
+    ], style={
+        "position": "absolute",
+        "top": "10px",
+        "left": "10px",
+        "background": "white",
+        "padding": "10px",
+        "borderRadius": "5px",
+        "zIndex": "999"
+    }),
+    
+    dcc.Graph(id="map", figure=mapa_base("es"),
               style={"height":"100vh"}),
     html.Div(id="info",
              style={"position":"absolute",
@@ -228,44 +253,50 @@ app.layout = html.Div([
                     "padding":"15px"})
 ])
 
+
 @app.callback(
     Output("map","figure"),
     Output("info","children"),
-    Input("map","clickData")
+    Input("map","clickData"),
+    Input("language-selector", "value"),
+    prevent_initial_call=False
 )
-def update(click):
+def update(click, lang):
 
-    fig = mapa_base()
+    fig = mapa_base(lang)
 
     if not click:
-        return fig,"Click en un país"
+        return fig, t("click_country", lang)
 
     iso = click["points"][0]["customdata"]
     pais = paises[iso]
 
-    fig = agregar_flechas(fig,pais)
+    fig = agregar_flechas(fig, pais)
 
     # mensaje si no hay datos
-    def render_section(title, total, relaciones):
+    def render_section(title, total, relaciones, lang):
         if total == 0 or not relaciones:
             return [
                 html.H4(title),
-                html.P("No hay datos en European Data Portal")
+                html.P(t("no_data", lang))
             ]
         else:
             return [
                 html.H4(title),
-                html.P(f"Total: {total}"),
+                html.P(f"{t('total', lang)}: {total}"),
                 html.Ul([
                     html.Li(f"{r.nombre}: {r.valor}")
                     for r in relaciones
                 ])
             ]
 
+    # Obtener nombre del país en el idioma seleccionado
+    country_name = t(f"countries.{iso}", lang)
+
     info = html.Div([
-        html.H3(pais.nombre),
-        *render_section("Recepción", pais.recepcion.total, pais.recepcion.relaciones),
-        *render_section("Emisión", pais.emision.total, pais.emision.relaciones)
+        html.H3(country_name),
+        *render_section(t("reception", lang), pais.recepcion.total, pais.recepcion.relaciones, lang),
+        *render_section(t("emission", lang), pais.emision.total, pais.emision.relaciones, lang)
     ])
 
     return fig, info
@@ -273,5 +304,3 @@ def update(click):
 
 if __name__ == "__main__":
     app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
-
-    
