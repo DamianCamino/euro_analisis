@@ -148,7 +148,7 @@ def mapa_base(lang="es"):
     lats,lons,texts,isos=[],[],[],[]
 
     for iso,p in paises.items():
-        #lats.append(p.lat)
+        lats.append(p.lat)
         lons.append(p.lon)
        
         # texts.append(t(f"countries.{iso}", lang))
@@ -335,12 +335,29 @@ app.layout = html.Div([
                 style={"fontSize": "12px", "margin": "0", "color": "#666"}
             )
         ], style={"borderTop": "1px solid #ddd", "paddingTop": "10px"}),
-        
+                
         html.Div([
-            html.P(
-                "Developed by Damián Camino",
-                style={"fontSize": "12px", "margin": "0", "color": "#666", "textAlign": "center"}
-            )
+            html.Div([
+                html.Div(
+                    "Placeholder Image",
+                    style={
+                        "width": "100%",
+                        "height": "80px",
+                        "backgroundColor": "#cccccc",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "fontSize": "12px",
+                        "color": "#666",
+                        "borderRadius": "4px",
+                        "marginBottom": "10px"
+                    }
+                ),
+                html.P(
+                    "Developed by Damián Camino",
+                    style={"fontSize": "12px", "margin": "0", "color": "#666", "textAlign": "center"}
+                )
+            ])
         ])
         
         
