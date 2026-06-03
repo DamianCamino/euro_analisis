@@ -338,18 +338,12 @@ app.layout = html.Div([
                 
         html.Div([
             html.Div([
-                html.Div(
-                    "Placeholder Image",
+                html.Img(
+                    src="/assets/signature.png",
                     style={
                         "width": "100%",
-                        "height": "80px",
-                        "backgroundColor": "#cccccc",
-                        "display": "flex",
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                        "fontSize": "12px",
-                        "color": "#666",
-                        "borderRadius": "4px",
+                        "maxHeight": "80px",
+                        "objectFit": "contain",
                         "marginBottom": "10px"
                     }
                 ),
