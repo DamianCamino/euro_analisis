@@ -322,19 +322,44 @@ app.layout = html.Div([
             html.Span("Bidirectional Flow", style={"verticalAlign": "middle"})
         ], style={"marginBottom": "20px"}),
         
-        # Data source
+        # source
         html.Div([
             html.P(
                 [
                     "Data obtained from ",
-                    html.A("https://data.europa.eu", 
-                           href="https://data.europa.eu", 
+                    html.A("open EU data in eurostat", 
+                           href="https://ec.europa.eu/eurostat/databrowser/view/migr_imm1ctz/default/table?lang=en&category=migr.migr_cit.migr_immi", 
                            target="_blank",
                            style={"color": "#0066cc", "textDecoration": "underline"})
                 ],
                 style={"fontSize": "12px", "margin": "0", "color": "#666"}
             )
-        ], style={"borderTop": "1px solid #ddd", "paddingTop": "10px"})
+        ], style={"borderTop": "1px solid #ddd", "paddingTop": "10px"}),
+                
+        html.Div([
+            html.Div([
+                html.Div(
+                    "Placeholder Image",
+                    style={
+                        "width": "100%",
+                        "height": "80px",
+                        "backgroundColor": "#cccccc",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "fontSize": "12px",
+                        "color": "#666",
+                        "borderRadius": "4px",
+                        "marginBottom": "10px"
+                    }
+                ),
+                html.P(
+                    "Developed by Damián Camino",
+                    style={"fontSize": "12px", "margin": "0", "color": "#666", "textAlign": "center"}
+                )
+            ])
+        ])
+        
         
     ], style={
         "position": "absolute",
@@ -390,7 +415,7 @@ def update(click, lang):
                 html.H4(title),
                 html.P(f"{t('total', lang)}: {total}"),
                 html.Ul([
-                    # FIXED: Translate country names using t() function
+                    
                     html.Li(f"{t(f'countries.{r.iso2}', lang)}: {r.valor}")
                     for r in relaciones
                 ])
