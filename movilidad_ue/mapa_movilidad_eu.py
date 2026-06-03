@@ -150,24 +150,20 @@ def mapa_base(lang="es"):
     for iso,p in paises.items():
         lats.append(p.lat)
         lons.append(p.lon)
-        # COMMENTED OUT: Removes name tags next to points
+       
         # texts.append(t(f"countries.{iso}", lang))
         isos.append(iso)
 
     fig = go.Figure(go.Scattergeo(
         lat=lats,
         lon=lons,
-        # COMMENTED OUT: Removes hover behavior and text display
         # text=texts,
         customdata=isos,
-        # COMMENTED OUT: Changed from "markers+text" to "markers" to disable text labels
         # mode="markers+text",
         mode="markers",
-        # COMMENTED OUT: No longer needed
         # textposition="top center",
         marker=dict(size=8,color="grey"),
-        # ADDED: Disable hover information
-        hoverinfo="skip"
+        
     ))
 
     fig.update_geos(scope="europe", showcountries=True)
@@ -177,19 +173,19 @@ def mapa_base(lang="es"):
 
 def agregar_flechas(fig, pais, lang="es"):
 
-    # Get all immigration and emigration countries for this pais
+    # cogemos la informacion para este pais
     immigration_isos = {r.iso2 for r in pais.recepcion.relaciones}
     emigration_isos = {r.iso2 for r in pais.emision.relaciones}
     
-    # Find countries that are in BOTH immigration and emigration (bidirectional)
+    #revisamos bidireccionalidad para violeta
     bidirectional_isos = immigration_isos & emigration_isos
 
-    # RECEPCION (Immigration - Orange lines)
+    # RECEPCION naranja
     for r in pais.recepcion.relaciones:
         if r.iso2 in paises:
             origen = paises[r.iso2]
             
-            # Skip if this is a bidirectional flow (will be drawn as purple)
+            # salta si bidireccional
             if r.iso2 in bidirectional_isos:
                 continue
 
@@ -202,12 +198,12 @@ def agregar_flechas(fig, pais, lang="es"):
                 hoverinfo="skip"
             ))
 
-    # EMISION (Emigration - Blue lines)
+    # EMISION azul
     for r in pais.emision.relaciones:
         if r.iso2 in paises:
             destino = paises[r.iso2]
             
-            # Skip if this is a bidirectional flow (will be drawn as purple)
+            # caso de que ambos
             if r.iso2 in bidirectional_isos:
                 continue
                 
@@ -236,7 +232,7 @@ def agregar_flechas(fig, pais, lang="es"):
                 hoverinfo="skip"
             ))
 
-    # BIDIRECTIONAL (Both immigration and emigration - Purple lines)
+    # BIDIRECCIONAL 
     for iso2 in bidirectional_isos:
         if iso2 in paises:
             other = paises[iso2]
@@ -283,11 +279,11 @@ app.layout = html.Div([
         "zIndex": "999"
     }),
     
-    # Legend and data source
+    # legend
     html.Div([
         html.H4("Legend", style={"marginTop": "0", "marginBottom": "15px"}),
         
-        # Orange line - Immigration
+        # naranja
         html.Div([
             html.Div(style={
                 "display": "inline-block",
@@ -300,7 +296,7 @@ app.layout = html.Div([
             html.Span("Immigration", style={"verticalAlign": "middle"})
         ], style={"marginBottom": "12px"}),
         
-        # Blue line - Emigration
+        #azul
         html.Div([
             html.Div(style={
                 "display": "inline-block",
@@ -313,7 +309,7 @@ app.layout = html.Div([
             html.Span("Emigration", style={"verticalAlign": "middle"})
         ], style={"marginBottom": "12px"}),
         
-        # Purple line - Bidirectional
+        # violeta
         html.Div([
             html.Div(style={
                 "display": "inline-block",
@@ -400,7 +396,7 @@ def update(click, lang):
                 ])
             ]
 
-    # Obtener nombre del país en el idioma seleccionado
+    #  nombre del país en el idioma seleccionado
     country_name = t(f"countries.{iso}", lang)
 
     info = html.Div([
