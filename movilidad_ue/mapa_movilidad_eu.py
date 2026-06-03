@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 import dash
-from dash import dcc, html, Input, Output, State
+from dash import dcc, html, Input, Output
 import plotly.graph_objects as go
 
 from translations import t
@@ -150,17 +150,24 @@ def mapa_base(lang="es"):
     for iso,p in paises.items():
         lats.append(p.lat)
         lons.append(p.lon)
-        texts.append(t(f"countries.{iso}", lang))
+        # COMMENTED OUT: Removes name tags next to points
+        # texts.append(t(f"countries.{iso}", lang))
         isos.append(iso)
 
     fig = go.Figure(go.Scattergeo(
         lat=lats,
         lon=lons,
-        text=texts,
+        # COMMENTED OUT: Removes hover behavior and text display
+        # text=texts,
         customdata=isos,
-        mode="markers+text",
-        textposition="top center",
-        marker=dict(size=8,color="grey")
+        # COMMENTED OUT: Changed from "markers+text" to "markers" to disable text labels
+        # mode="markers+text",
+        mode="markers",
+        # COMMENTED OUT: No longer needed
+        # textposition="top center",
+        marker=dict(size=8,color="grey"),
+        # ADDED: Disable hover information
+        hoverinfo="skip"
     ))
 
     fig.update_geos(scope="europe", showcountries=True)
@@ -168,25 +175,42 @@ def mapa_base(lang="es"):
     return fig
 
 
-def agregar_flechas(fig, pais):
+def agregar_flechas(fig, pais, lang="es"):
 
-    # RECEPCION 
+    # Get all immigration and emigration countries for this pais
+    immigration_isos = {r.iso2 for r in pais.recepcion.relaciones}
+    emigration_isos = {r.iso2 for r in pais.emision.relaciones}
+    
+    # Find countries that are in BOTH immigration and emigration (bidirectional)
+    bidirectional_isos = immigration_isos & emigration_isos
+
+    # RECEPCION (Immigration - Orange lines)
     for r in pais.recepcion.relaciones:
         if r.iso2 in paises:
             origen = paises[r.iso2]
+            
+            # Skip if this is a bidirectional flow (will be drawn as purple)
+            if r.iso2 in bidirectional_isos:
+                continue
 
             fig.add_trace(go.Scattergeo(
                 lat=[origen.lat, pais.lat],
                 lon=[origen.lon, pais.lon],
                 mode="lines",
-                line=dict(color="blue",width=2),
-                showlegend=False
+                line=dict(color="orange", width=2),
+                showlegend=False,
+                hoverinfo="skip"
             ))
 
-    # EMISION 
+    # EMISION (Emigration - Blue lines)
     for r in pais.emision.relaciones:
         if r.iso2 in paises:
             destino = paises[r.iso2]
+            
+            # Skip if this is a bidirectional flow (will be drawn as purple)
+            if r.iso2 in bidirectional_isos:
+                continue
+                
             dx = destino.lon - pais.lon
             dy = destino.lat - pais.lat
             if abs(dx) > abs(dy):
@@ -198,16 +222,32 @@ def agregar_flechas(fig, pais):
                 lat=[pais.lat, destino.lat],
                 lon=[pais.lon, destino.lon],
                 mode="lines",
-                line=dict(color="orange", width=2),
-                showlegend=False
+                line=dict(color="blue", width=2),
+                showlegend=False,
+                hoverinfo="skip"
             ))
 
             fig.add_trace(go.Scattergeo(
                 lat=[destino.lat],
                 lon=[destino.lon],
                 mode="markers",
-                marker=dict(size=12, symbol=arrow_symbol, color="orange"),
-                showlegend=False
+                marker=dict(size=12, symbol=arrow_symbol, color="blue"),
+                showlegend=False,
+                hoverinfo="skip"
+            ))
+
+    # BIDIRECTIONAL (Both immigration and emigration - Purple lines)
+    for iso2 in bidirectional_isos:
+        if iso2 in paises:
+            other = paises[iso2]
+            
+            fig.add_trace(go.Scattergeo(
+                lat=[other.lat, pais.lat],
+                lon=[other.lon, pais.lon],
+                mode="lines",
+                line=dict(color="purple", width=3),
+                showlegend=False,
+                hoverinfo="skip"
             ))
 
     return fig
@@ -243,6 +283,75 @@ app.layout = html.Div([
         "zIndex": "999"
     }),
     
+    # Legend and data source
+    html.Div([
+        html.H4("Legend", style={"marginTop": "0", "marginBottom": "15px"}),
+        
+        # Orange line - Immigration
+        html.Div([
+            html.Div(style={
+                "display": "inline-block",
+                "width": "30px",
+                "height": "3px",
+                "backgroundColor": "orange",
+                "marginRight": "10px",
+                "verticalAlign": "middle"
+            }),
+            html.Span("Immigration", style={"verticalAlign": "middle"})
+        ], style={"marginBottom": "12px"}),
+        
+        # Blue line - Emigration
+        html.Div([
+            html.Div(style={
+                "display": "inline-block",
+                "width": "30px",
+                "height": "3px",
+                "backgroundColor": "blue",
+                "marginRight": "10px",
+                "verticalAlign": "middle"
+            }),
+            html.Span("Emigration", style={"verticalAlign": "middle"})
+        ], style={"marginBottom": "12px"}),
+        
+        # Purple line - Bidirectional
+        html.Div([
+            html.Div(style={
+                "display": "inline-block",
+                "width": "30px",
+                "height": "3px",
+                "backgroundColor": "purple",
+                "marginRight": "10px",
+                "verticalAlign": "middle"
+            }),
+            html.Span("Bidirectional Flow", style={"verticalAlign": "middle"})
+        ], style={"marginBottom": "20px"}),
+        
+        # Data source
+        html.Div([
+            html.P(
+                [
+                    "Data obtained from ",
+                    html.A("https://data.europa.eu", 
+                           href="https://data.europa.eu", 
+                           target="_blank",
+                           style={"color": "#0066cc", "textDecoration": "underline"})
+                ],
+                style={"fontSize": "12px", "margin": "0", "color": "#666"}
+            )
+        ], style={"borderTop": "1px solid #ddd", "paddingTop": "10px"})
+        
+    ], style={
+        "position": "absolute",
+        "left": "10px",
+        "top": "80px",
+        "background": "white",
+        "padding": "15px",
+        "borderRadius": "5px",
+        "zIndex": "999",
+        "width": "200px",
+        "fontSize": "13px"
+    }),
+    
     dcc.Graph(id="map", figure=mapa_base("es"),
               style={"height":"100vh"}),
     html.Div(id="info",
@@ -271,7 +380,7 @@ def update(click, lang):
     iso = click["points"][0]["customdata"]
     pais = paises[iso]
 
-    fig = agregar_flechas(fig, pais)
+    fig = agregar_flechas(fig, pais, lang)
 
     # mensaje si no hay datos
     def render_section(title, total, relaciones, lang):
@@ -285,7 +394,8 @@ def update(click, lang):
                 html.H4(title),
                 html.P(f"{t('total', lang)}: {total}"),
                 html.Ul([
-                    html.Li(f"{r.nombre}: {r.valor}")
+                    # FIXED: Translate country names using t() function
+                    html.Li(f"{t(f'countries.{r.iso2}', lang)}: {r.valor}")
                     for r in relaciones
                 ])
             ]
