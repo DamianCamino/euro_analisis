@@ -250,7 +250,7 @@ def update(click):
         if total == 0 or not relaciones:
             return [
                 html.H4(title),
-                html.P("No se encontraron datos sobre este país en European Data Portal")
+                html.P("No hay datos en European Data Portal")
             ]
         else:
             return [
