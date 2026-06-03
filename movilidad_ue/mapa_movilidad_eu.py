@@ -339,7 +339,7 @@ app.layout = html.Div([
         html.Div([
             html.Div([
                 html.Div(
-                    "Placeholder Image",
+                    
                     style={
                         "width": "100%",
                         "height": "80px",
