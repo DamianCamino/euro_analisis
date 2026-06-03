@@ -335,23 +335,12 @@ app.layout = html.Div([
                 style={"fontSize": "12px", "margin": "0", "color": "#666"}
             )
         ], style={"borderTop": "1px solid #ddd", "paddingTop": "10px"}),
-                
+        
         html.Div([
-            html.Div([
-                html.Img(
-                    src="/assets/signature.png",
-                    style={
-                        "width": "100%",
-                        "maxHeight": "80px",
-                        "objectFit": "contain",
-                        "marginBottom": "10px"
-                    }
-                ),
-                html.P(
-                    "Developed by Damián Camino",
-                    style={"fontSize": "12px", "margin": "0", "color": "#666", "textAlign": "center"}
-                )
-            ])
+            html.P(
+                "Developed by Damián Camino",
+                style={"fontSize": "12px", "margin": "0", "color": "#666", "textAlign": "center"}
+            )
         ])
         
         
