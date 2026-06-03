@@ -3,8 +3,6 @@ import chart_studio.plotly as py
 
 from mapa_movilidad_eu import mapa_base
 
-# Configura tus credenciales de Plotly Cloud aquí.
-# Alternativamente, puedes usar las variables de entorno PLOTLY_USERNAME y PLOTLY_API_KEY.
 USERNAME = "TU_USUARIO"
 API_KEY = "TU_API_KEY"
 
