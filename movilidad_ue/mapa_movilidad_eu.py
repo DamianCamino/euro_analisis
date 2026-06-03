@@ -228,7 +228,6 @@ app.layout = html.Div([
                     "padding":"15px"})
 ])
 
-
 @app.callback(
     Output("map","figure"),
     Output("info","children"),
@@ -246,22 +245,27 @@ def update(click):
 
     fig = agregar_flechas(fig,pais)
 
+    # mensaje si no hay datos
+    def render_section(title, total, relaciones):
+        if total == 0 or not relaciones:
+            return [
+                html.H4(title),
+                html.P("No se encontraron datos sobre este país en European Data Portal")
+            ]
+        else:
+            return [
+                html.H4(title),
+                html.P(f"Total: {total}"),
+                html.Ul([
+                    html.Li(f"{r.nombre}: {r.valor}")
+                    for r in relaciones
+                ])
+            ]
+
     info = html.Div([
         html.H3(pais.nombre),
-
-        html.H4("Recepción"),
-        html.P(f"Total: {pais.recepcion.total}"),
-        html.Ul([
-            html.Li(f"{r.nombre}: {r.valor}")
-            for r in pais.recepcion.relaciones
-        ]),
-
-        html.H4("Emisión"),
-        html.P(f"Total: {pais.emision.total}"),
-        html.Ul([
-            html.Li(f"{r.nombre}: {r.valor}")
-            for r in pais.emision.relaciones
-        ])
+        *render_section("Recepción", pais.recepcion.total, pais.recepcion.relaciones),
+        *render_section("Emisión", pais.emision.total, pais.emision.relaciones)
     ])
 
     return fig, info
